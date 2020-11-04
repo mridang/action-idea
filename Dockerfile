@@ -1,6 +1,6 @@
-FROM mridang/intellijidea:2020.1
+FROM mridang/ijidea:latest
 RUN apt-get update -y
 RUN apt-get install -y xsltproc
-COPY problems.xslt /problems.xslt
+COPY *.xslt /
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
