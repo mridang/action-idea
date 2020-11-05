@@ -38,5 +38,4 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: |
-            mridang/ijidea:latest
             docker.pkg.github.com/mridang/action-idea/idealize:latest
