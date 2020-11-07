@@ -1,5 +1,6 @@
 #!/bin/sh -l
 
+whoami
 export
 
 echo "$GITHUB_WORKSPACE/.idea"
