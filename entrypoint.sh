@@ -1,5 +1,7 @@
 #!/bin/sh -l
 
+pwd
+ls -lah
 ls -lrt "$3"
 whoami
 export
