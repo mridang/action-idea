@@ -1,6 +1,7 @@
 #!/bin/sh -l
 set -x
 
+git status
 pwd
 ls -lah
 ls -lrt "$3"
