@@ -46,8 +46,9 @@ if [ ! -f "$3/.descriptions.xml" ] ; then
   exit
 fi
 
-ls "$3"
-find "$3" -type f -exec cat {} \;
+
+ls -lah "$3"
+find "$3" -name '*.xml' ! -name '.descriptions.xml' -type f -exec cat {} \;
 
 echo "Cleaning path references"
 # The default run generates one file for each inspection type. We want to remove
