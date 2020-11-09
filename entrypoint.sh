@@ -30,6 +30,9 @@ if [ "$5" != "default" ]; then
   export IDEA_VM_OPTIONS=/opt/ide/bin/idea64.vmoptions
 fi
 
+# Create the output directory if it doesn't exist.
+mkdir -p "$3"
+
 # Run the inspection with the parameters provided. This script is a real pain to
 # work with so be cautious when editing the order of the parameters.
 echo "Running inspections"
