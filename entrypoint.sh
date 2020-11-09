@@ -42,7 +42,8 @@ fi
 echo "Running inspections"
 pwd
 ls -lah
-/opt/ide/bin/inspect.sh "$1" "$2" "$3" -d "$1" "-$4"
+#/opt/ide/bin/inspect.sh "$1" "$2" "$3" -d "$1" "-$4"
+/opt/ide/bin/inspect.sh /github/workspace /github/workspace/.idea/inspectionProfiles/CI.xml /output -d /github/workspace -v2
 if [ ! -f "$3/.descriptions.xml" ] ; then
   echo "No XML files generated in the output dir. Something is wrong."
   exit
