@@ -22,6 +22,9 @@ inputs:
   noinspect :
     required: false
     description: 'A command delimited list of inspection output files to be skipped.'
+  plugins :
+    required: false
+    description: 'A comma-delimited list of plugins to be installed'
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -32,3 +35,4 @@ runs:
     - ${{ inputs.verbosity }}
     - ${{ inputs.scope }}
     - ${{ inputs.noinspect }}
+    - ${{ inputs.plugins }}
