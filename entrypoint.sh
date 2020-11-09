@@ -1,13 +1,6 @@
 #!/bin/sh -l
 set -x
 
-git status
-pwd
-ls -lah
-ls -lrt "$3"
-whoami
-export
-
 echo "$GITHUB_WORKSPACE/.idea"
 # if [ ! -d "$GITHUB_WORKSPACE/.idea" ] ; then
 #  echo "Couldn't find the .idea folder. Have you version handled it?"
@@ -45,10 +38,6 @@ if [ ! -f "$3/.descriptions.xml" ] ; then
   echo "No XML files generated in the output dir. Something is wrong."
   exit
 fi
-
-
-ls -lah "$3"
-find "$3" -name '*.xml' ! -name '.descriptions.xml' -type f -exec cat {} \;
 
 echo "Cleaning path references"
 # The default run generates one file for each inspection type. We want to remove
