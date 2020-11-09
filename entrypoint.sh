@@ -40,6 +40,8 @@ fi
 # Run the inspection with the parameters provided. This script is a real pain to
 # work with so be cautious when editing the order of the parameters.
 echo "Running inspections"
+pwd
+ls -lah
 /opt/ide/bin/inspect.sh "$1" "$2" "$3" -d "$1" "-$4"
 if [ ! -f "$3/.descriptions.xml" ] ; then
   echo "No XML files generated in the output dir. Something is wrong."
