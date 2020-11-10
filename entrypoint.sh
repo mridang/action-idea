@@ -1,5 +1,9 @@
-#!/bin/sh -l
+#!/bin/sh
 set -x
+
+# Install all the given plugins that are needed by the action
+echo "Installing IDE Plugins"
+echo "$6" | tr -d '\n' | xargs --no-run-if-empty --delimiter=',' --max-args=1 -I{} /opt/install-plugin.sh 2020.1 {} /opt/plugins
 
 echo "$GITHUB_WORKSPACE/.idea"
 # if [ ! -d "$GITHUB_WORKSPACE/.idea" ] ; then
