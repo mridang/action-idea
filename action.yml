@@ -21,7 +21,7 @@ inputs:
     default: 'default'
   noinspect :
     required: false
-    description: 'A command delimited list of inspection output files to be skipped.'
+    description: 'A comma-delimited list of inspection output files to be skipped.'
     default: 'noop'
   plugins :
     required: false
