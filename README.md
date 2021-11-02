@@ -10,6 +10,7 @@ This action runs IntelliJ inspections on your codebase.
 | `output`                | `string` |         | The absolute path to spew outputs to                              |
 | `verbosity`             | `string` | v2      | The verbose level. v0 - silent, v1 - verbose, v2 - most verbose.  |
 | `scope`                 | `string` |         | The inspection scope to be used. If none, all files are inspected.|
+| `noinspect`             | `string` | noop    | A comma-delimited list of inspection output files to be skipped.  |
 | `plugins`               | `string` |         | A comma-delimited list of plugins to be installed                 |
 
 ## Usage
